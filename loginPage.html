@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    height: 100vh;
+    /* Full height */
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    }
+
+    .container {
+        height: 100%;
+        display: flex;
+
+    }
+
+    .left {
+        flex: 5;
+        background-color: rgb(255, 255, 255);
+        border-radius: 0 100px 100px 0; /* Curved border effect */
+        overflow: hidden; /* Hide overflow if needed */
+        position: relative;
+    }
+
+    .right {
+        flex: 5;
+        background-color: black;
+        width: 100vw; /* Ensure full width of viewport */
+        height: 100vh; /* Ensure full height of viewport */
+        position: relative; /* Ensure the container is positioned correctly */
+        overflow: hidden; 
+    }
+    .left_part_content{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        /* align-items: center; */
+        margin-top: 90px;
+        position: absolute;
+        left: 80px;  
+    }
+    .main_name{
+        position: relative;
+        left: 50px;
+        top: 85px;
+    }
+    .login_part{
+        position: relative;
+        left: 50px;
+    }
+    input[type="tel"] {
+        border: 2px solid #4B4B4B;
+        background-color: transparent;
+        padding: 0;
+        margin: 0;
+        outline: none;
+        border-radius: 7px;
+        height: 40px;
+        width: 383px;
+        background: url('images/call.svg') no-repeat scroll 7px;
+        padding-left: 30px;
+        background-size: 20px;
+        font-size: 16px;
+        position: relative;
+        z-index: 2;
+    }
+    .next_button{
+        width: 420px;
+        height: 50px;
+        border-radius: 10px;
+        outline: none;
+        background-color: #3D41FF;
+        border: none;
+        color: white;
+        font-size: 18px;
+        cursor: pointer;
+
+    }
+
+
+    .microphone{
+        width: 100%;
+        height: 50%;
+    }
+    .video video{
+        width: 100%;
+        height: 100%;
+        object-fit: contain; /* Scale video to cover the container without distortion */
+        position: absolute; /* Ensure video is positioned correctly within container */
+        top: 0;
+        left: 0;
+    }
+    .next_part{
+        position: absolute;
+        top: -40px;
+    }
+    .phone_number p,
+    .otp_container p {
+        position: relative;
+        top: 10px;
+        color: #232222; /* Ensure text color is visible */
+        font-size: 16px;
+        font-weight: 500;
+        z-index: 2; /* Ensure text is above other elements */
+    }
+
+    .main_name h1{
+        color: #01043A;
+        font-size: 44px;
+    }
+    .phone_number{
+        position: absolute;
+        top: 95px;
+    }
+    .logo{
+        position: absolute;
+        right: 210px;
+        top: -75px;
+    }
+    .otp{
+        width: 389px;
+        background-color: red;
+        position: absolute;
+        top: 88px;
+    }
+
+    .otp_container {
+
+        margin-top: 20px;
+    }
+
+    .otp_inputs {
+        display: flex;
+        gap: 10px;
+    }
+
+    .otp_input {
+        width: 40px;
+        padding: 10px;
+        text-align: center;
+        font-size: 18px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+    .otp_container p{
+        font-weight: 500;
+        color: #232222;
+        margin-top: 20px;
+        opacity: 0; /* Initially hidden */
+        transform: translateY(-20px); /* Initial position */
+        transition: opacity 0.3s ease, transform 0.3s ease;
+
+    }
+    .otp_container.visible {
+        opacity: 1; /* Fully visible */
+        transform: translateY(0); /* Final position */
+    }
+    .confirm_button {
+        width: 420px;
+        height: 50px;
+        border-radius: 10px;
+        outline: none;
+        background-color: #3D41FF;
+        border: none;
+        color: white;
+        font-size: 18px;
+        cursor: pointer;
+    }
+
+    /* Existing styles... */
+    /* Existing styles... */
+
+    /* Ensure the login part has enough space for the OTP section */
+    .login_part {
+        position: relative;
+        transition: padding-bottom 0.3s ease; /* Smooth transition for padding */
+        z-index: 1; /* Ensure it's above the background elements */
+    }
+
+    .show_otp {
+        padding-bottom: 150px; /* Adjust this value to ensure space for OTP and button */
+    }
+
+    /* Adjust OTP container to appear below phone number section */
+    .otp_container {
+        opacity: 0; /* Initially hidden */
+        transform: translateY(-20px); /* Initial position */
+        transition: opacity 0.3s ease, transform 0.3s ease; /* Smooth transition */
+        display: block; /* Ensure it's in the flow */
+        margin-top: 177px; /* Space above OTP */
+        position: relative; /* Ensure it appears below the phone number section */
+        z-index: 1; /* Ensure it's above other elements in the container */
+    }
+
+    .otp_container.visible {
+        opacity: 1; /* Fully visible */
+        transform: translateY(0); /* Final position */
+    }
+
+    /* Button styles */
+    .next_part,
+    .confirm_button {
+        width: 420px;
+        height: 50px;
+        border-radius: 10px;
+        outline: none;
+        background-color: #3D41FF;
+        border: none;
+        color: white;
+        font-size: 18px;
+        cursor: pointer;
+        transition: transform 0.3s ease; /* Smooth transition for button */
+        position: relative /* Smooth transition for button */
+    }
+
+    .confirm_button {
+        background-color: #3D41FF;
+    }
+    .button_container {
+        position: relative;
+        transition: padding-bottom 0.3s ease; /* Smooth transition for padding */
+    }
+    .show_otp .button_container {
+        padding-top: 60px; /* Adjust based on how much space you need for sliding */
+    }
+
+</style>
+<body>
+    <div class="container left">
+        <div class="left_part_content">
+            <img class = "logo" src="images/Group 2 (1).svg" alt="">
+            <div class="main_name">
+                <h1>Welcome to GrievX</h1>
+
+            </div>
+            <div class="login_part">
+                <div class="phone_number">
+                    <p>Phone number</p>
+                    <div class="phone_input">
+                        <i class="call_icon"></i>
+                        <input inputmode = "numeric" type="tel" name="phone_number" id="phone_number">
+                    </div>
+                </div>
+                <div class="otp_container" id="otpContainer">
+            <p>Enter OTP</p>
+            <div class="otp_inputs">
+                <input type="text" class="otp_input" maxlength="1">
+                <input type="text" class="otp_input" maxlength="1">
+                <input type="text" class="otp_input" maxlength="1">
+                <input type="text" class="otp_input" maxlength="1">
+            </div>
+        </div>
+        <div class = "button_container">
+            <div class="next_part">
+                <button class="next_button" type="submit" name="submit" id="submit">Next</button>
+            </div>
+        </div>
+                
+            </div>
+        </div>
+    </div>
+    <div class="container right">
+        <div class="video">
+            <video src="videos/cubic.mp4" autoplay loop muted></video>
+        </div>
+    </div>
+</body>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    const nextButton = document.getElementById('submit');
+    const phoneNumberInput = document.getElementById('phone_number');
+    const otpContainer = document.getElementById('otpContainer');
+    const loginPart = document.querySelector('.login_part');
+    const buttonContainer = document.querySelector('.button_container');
+
+    // Disable the "Next" button initially
+    nextButton.disabled = true;
+
+    // Add input event listener to phone number input field
+    phoneNumberInput.addEventListener('input', function () {
+        // Regular expression to check if the input is a valid phone number
+        // The phone number should start with digits 7, 8, or 9 and be 10 digits long
+        const phoneNumberPattern = /^[7-9][0-9]{9}$/;
+
+        // Check if the phone number matches the pattern
+        if (phoneNumberPattern.test(phoneNumberInput.value)) {
+            // If valid, enable the "Next" button
+            nextButton.disabled = false;
+        } else {
+            // If not valid, disable the "Next" button
+            nextButton.disabled = true;
+        }
+    });
+
+    nextButton.addEventListener('click', function () {
+        // If the button text is "Next"
+        if (nextButton.textContent === 'Next') {
+            // Show the OTP container with a sliding effect
+            otpContainer.classList.add('visible');
+
+            // Add class to adjust padding and create space for OTP section
+            loginPart.classList.add('show_otp');
+
+            // Change the button text to "Confirm"
+            nextButton.textContent = 'Confirm';
+            nextButton.classList.remove('next_button');
+            nextButton.classList.add('confirm_button');
+
+            // Add sliding effect for the button
+            buttonContainer.classList.add('show_otp');
+        } else if (nextButton.textContent === 'Confirm') {
+            // If the button text is "Confirm", proceed with the redirection immediately
+            window.location.href = 'http://127.0.0.1:5000/main';
+        }
+    });
+
+    // Handle OTP input focus shift
+    const otpInputs = document.querySelectorAll('.otp_input');
+
+    otpInputs.forEach((input, index) => {
+        input.addEventListener('input', function () {
+            if (input.value.length === 1 && index < otpInputs.length - 1) {
+                otpInputs[index + 1].focus();
+            }
+        });
+
+        input.addEventListener('keydown', function (e) {
+            if (e.key === 'Backspace' && input.value.length === 0 && index > 0) {
+                otpInputs[index - 1].focus();
+            }
+        });
+    });
+});
+
+</script>
+</html>
