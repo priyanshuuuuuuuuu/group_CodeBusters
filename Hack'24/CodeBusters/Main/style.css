@@ -1,0 +1,180 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    /* background-color: #f5f5f5; Light grey background */
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white; /* White background */
+    padding: 1px 30px;
+    border-bottom: 1px solid #ccc; /* Light grey border */
+}
+.navbar .brand {
+    font-weight: bold;
+    font-size: 1.2em; /* Slightly smaller font size */
+    color: #000; /* Black color */
+}
+.navbar a {
+    color: #000; /* Black color */
+    text-decoration: none;
+    padding: 10px;
+}
+.navbar .file-grievance {
+    border: none; /* Blue border */
+    border-radius: 5px;
+    background-color: #3D41FF;
+    padding: 8px 12px;
+    color: #ffffff; /* Blue text */
+}
+.header {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #ffffff; /* White background */
+}
+.header h1 {
+    color: #000; /* Black color */
+    font-size: 2em; /* Slightly smaller font size */
+}
+.header p {
+    color: #000; /* Black color */
+    font-size: 1.5em; /* Larger font size for the second line */
+}
+.submit-btn {
+    background-color: #3D41FF; /* Purple */
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 5px;
+    margin-top: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    list-style:disc;
+    width: 340px;
+    font-size: 1.2em;
+}
+.header h1{
+    font-size: 3em;
+    color: #000;
+}
+.box{
+    width: 60%;
+    margin:auto;
+}
+.header p{
+    font-size: 2em;
+    color: #000;
+}
+.header p:first-child{
+    position: relative;
+    top: 15px;
+}
+.header p:last-child{
+    position: relative;
+    bottom: 15px;
+}
+.footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 20px;
+    background-color: #161616; /* Black background */
+    color: #fff; /* White text */
+    border-top-left-radius: 25px; /* Curved top left */
+    border-top-right-radius: 25px; /* Curved top right */
+    /* box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.3); Light shadow for depth */
+    overflow: hidden; /* Ensure content doesn’t overflow */
+    height: 300px;
+    margin-top: 160px;  
+}
+
+.footer div {
+    flex: 1;
+}
+
+.social-links, .quick-links {
+    display: flex;
+    flex-direction: column;
+}
+
+.social-links a, .quick-links a {
+    color: #fff; /* White color for links */
+    text-decoration: none;
+    margin-bottom: 10px;
+    font-size: 1em; /* Consistent font size */
+}
+
+.social-links a:hover, .quick-links a:hover {
+    color: #3D41FF; /* Highlight color on hover */
+    text-decoration: underline; /* Underline on hover */
+}
+
+.footer h3 {
+    margin-bottom: 15px; /* Space between heading and links */
+    color: #fff; /* White color for headings */
+    font-size: 1.2em; /* Slightly larger font size for headings */
+    font-weight: bold;
+}
+.brand img{
+    position: relative;
+    top: 20px;
+}
+.homee{
+    display: flex;
+    gap: 10px;
+}
+
+/* Container for typewriter effect */
+/* Container for typewriter effect */
+/* Container for typewriter effect */
+.header {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #ffffff;
+    position: relative; /* Create a positioning context */
+    overflow: hidden; /* Hide overflowed content */
+    margin-top: 100px; /* Move header down from the top */
+}
+
+#welcome-text {
+    display: inline-block;
+    position: relative; /* Use relative positioning */
+    white-space: nowrap; /* Prevent text wrapping */
+    overflow: hidden; /* Hide overflowed text */
+    animation: typewriter 3s steps(40, end) forwards, fadeInText 3.5s steps(40, end) forwards; /* Adjust timing */
+    margin: 0 auto; /* Center text horizontally */
+    max-width: 100%; /* Ensure text fits within container */
+}
+
+/* Keyframes for typewriter effect */
+@keyframes typewriter {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%; /* Adjust as needed to fit text */
+    }
+}
+
+/* Keyframes to handle text fading in effect */
+@keyframes fadeInText {
+    from {
+        opacity: 0; /* Start hidden */
+    }
+    to {
+        opacity: 1; /* End visible */
+    }
+}
+
+/* Headline animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+#headline {
+    opacity: 0;
+    animation: fadeIn 1s ease-out 1.5s forwards; /* Adjust timing as needed */
+}

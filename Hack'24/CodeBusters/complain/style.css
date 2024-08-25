@@ -1,0 +1,212 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    /* background-color: #f5f5f5; Light grey background */
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    /* White background */
+    padding: 1px 30px;
+    border-bottom: 1px solid #ccc;
+    /* Light grey border */
+}
+
+.navbar .brand {
+    font-weight: bold;
+    font-size: 1.2em;
+    /* Slightly smaller font size */
+    color: #000;
+    /* Black color */
+}
+
+.navbar a {
+    color: #000;
+    /* Black color */
+    text-decoration: none;
+    padding: 10px;
+}
+
+.navbar .file-grievance {
+    border: none;
+    /* Blue border */
+    border-radius: 5px;
+    background-color: #3D41FF;
+    padding: 8px 12px;
+    color: #ffffff;
+    /* Blue text */
+}
+
+.brand img {
+    position: relative;
+    top: 20px;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    /* Centering box1 within main */
+    padding: 20px;
+    flex-direction: column;
+    /* Ensures children are stacked vertically */
+}
+
+.box1 {
+    display: flex;
+    justify-content: center;
+}
+
+/* .box2 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Aligns items within box2 to the start */
+}
+
+*/ .box2 div {
+    margin-bottom: 15px;
+    /* Space between form fields */
+}
+
+.box2 label {
+    display: block;
+    /* Makes the label a block element */
+    margin-bottom: 5px;
+    /* Space between label and input */
+    font-weight: bold;
+    /* Bold labels for clarity */
+}
+
+.box2 input,
+.box2 select {
+    width: 100%;
+    /* Ensures inputs and selects take full width */
+    padding: 8px;
+    /* Adds padding inside inputs and selects */
+    box-sizing: border-box;
+    /* Includes padding and border in element's total width and height */
+    border: 2px solid #1a1a1a;
+    /* Consistent border for inputs and select */
+    border-radius: 4px;
+    /* Rounded corners for inputs and select */
+}
+
+input[type="text"],
+input[type="email"] {
+    width: 270px;
+    /* Specific width for text and email inputs */
+}
+
+.address {
+    height: 85px;
+    /* Height adjustment for address section */
+}
+
+.catogeries {
+    margin-top: 15px;
+    /* Space above the categories section */
+    width: 100%;
+    /* Ensure the categories section takes full width */
+}
+
+.catogeries label {
+    margin-bottom: 5px;
+    /* Space between the label and the select */
+}
+
+.catogeries select {
+    width: 270px;
+    /* Matches the width of other input fields */
+    padding: 8px;
+    /* Consistent padding with other inputs */
+    border: 2px solid #1a1a1a;
+    /* Matching border with other inputs */
+    border-radius: 4px;
+    /* Consistent rounded corners */
+    background-color: #ffffff;
+    /* White background for the select */
+    appearance: none;
+    /* Remove default select arrow to allow custom styling */
+    -webkit-appearance: none;
+    /* Remove default select arrow for WebKit browsers */
+    -moz-appearance: none;
+    /* Remove default select arrow for Mozilla browsers */
+}
+
+.catogeries select:focus {
+    outline: none;
+    /* Remove default focus outline */
+    border-color: #3D41FF;
+    /* Change border color on focus */
+    box-shadow: 0 0 5px rgba(61, 65, 255, 0.5);
+    /* Add subtle shadow for focus effect */
+}
+
+/* Optional: Adding a custom arrow for the select dropdown */
+.catogeries {
+    position: relative;
+    /* Relative positioning for the custom arrow */
+}
+
+.catogeries::after {
+    content: "▼";
+    /* Unicode character for the down arrow */
+    font-size: 12px;
+    color: #1a1a1a;
+    position: absolute;
+    right: 15px;
+    /* Position arrow on the right inside the select */
+    top: 38px;
+    /* Adjust vertically to align with the select element */
+    pointer-events: none;
+    /* Ensures the arrow does not interfere with select interactions */
+}
+
+.box3 {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.box2 {
+    display: flex;
+}
+
+#problem {
+    height: 298px;
+    width: 332px;
+    border: 2px solid #1a1a1a;
+    border-radius: 10px;
+    color: black;
+    font-size: 16px;
+}
+
+.box2 {
+    justify-content: center;
+    gap: 31px;
+}
+.submit-btn {
+    background-color: #3D41FF; /* Purple */
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 5px;
+    margin-top: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    list-style:disc;
+    width: 340px;
+    font-size: 1.2em;
+}
+.main_box{
+    display: flex;
+    flex-direction: column;
+}
+.box4{
+    display: flex;
+    justify-content: center;
+}

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complain</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="navbar">
+        <div class="brand">
+            <img src="images/logo.svg" alt="GrievEx Logo">
+        </div>
+        <div class="homee">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Our Team</a>
+            <a href="#" class="file-grievance">File Grievance</a>
+        </div>
+    </div>
+
+    <div class="main">
+        <div class="box1">
+            <div class="filing">
+                <h1>File a Complaint</h1>
+            </div>
+        </div>
+        <div class="main_box">
+            <div class="box2">
+                <div class="box3">
+                    <div class="name">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name">
+                    </div>
+                    <div class="email">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email">
+                    </div>
+                    <div class="address">
+                        <label for="Address">Address</label>
+                        <input  class = "address" type="text" id="address" name="address">
+                    </div>
+                    <div class="catogeries">
+                        <label for="catogeries">Catogery</label>
+                        <select name="catogeries" id="catogeries">
+                            <option value="1">Public Works Department</option>
+                            <option value="2">Electricity Board</option>
+                            <option value="3">Water Board</option>
+                            <option value="4">Garbage and Sewage Disposal</option>
+                            <option value="5">Fire Department</option>
+                            <option value="6">Police Department</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="problem">
+                    <label for="problem">Problem</label>
+                    <textarea name="problem" id="problem" cols="30" rows="10"></textarea>
+                </div>
+        
+            </div>
+            <div class="box4">
+                <button class="submit-btn" id = "headline">Submit Grievance</button>
+            </div>
+        </div>
+        
+    </div>
+
+</body>
+
+</html>
