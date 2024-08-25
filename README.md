@@ -1,7 +1,7 @@
 <h1>#Group CodeBusters</h1>
 
 <i><b>Please see the video from link below, and not uploaded on google form because it is slightly shorter</i></b>
-https://drive.google.com/drive/folders/1ApPaTIi4kY47TE_5rV38838vNXcxfZ7t?usp=sharing
+https://drive.google.com/file/d/1dJEz2MX1s6W7GzHFUJNwmsI_pYpdhOV8/view?usp=share_link
 
 <i>Instructions for using map API</i>
 <br>
