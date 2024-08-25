@@ -5,7 +5,8 @@ https://drive.google.com/drive/folders/1ApPaTIi4kY47TE_5rV38838vNXcxfZ7t?usp=sha
 
 <i>Instructions for using map API</i>
 <br>
-Download the file on your laptop or desktop, create a folder template, and add all the HTML in the template folder, except loginpage.html and map.html. Place all Python files in a single folder, and to run the webserver, run python app.py on the terminal.  Download depencies ---> Flasks, Requests, and any other depencies used that are causing errors.
+Download the file on your laptop or desktop, create a folder template, and add all the HTML in the template folder, except loginpage.html and map.html. Place all Python files in a single folder, and to run the webserver, run python app.py on the terminal.  Download depencies ---> flask, requests, and any other depencies used that are causing errors. You can directly use requirements file as we have added it too.<br>
+pip install -r requirements.txt
 
 
 <i> Instructions for using NLP classifier</i>
