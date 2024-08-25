@@ -1,0 +1,6 @@
+flask
+location
+numpy
+pandas
+sqlalchemy
+requests
