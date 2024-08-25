@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GrieveX Team</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 40px;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+            font-weight: bold;
+            font-size: 24px;
+        }
+        .logo::before {
+            content: "";
+            display: inline-block;
+            width: 24px;
+            height: 24px;
+            background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15.7 4.3l-7.4 7.4 7.4 7.4-1.4 1.4-8.8-8.8 8.8-8.8z"/></svg>');
+            transform: rotate(-45deg);
+            margin-right: 10px;
+        }
+        nav a {
+            margin-left: 20px;
+            text-decoration: none;
+            color: #333;
+        }
+        .submit-btn {
+            background-color: #5d5fef;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+        main {
+            text-align: center;
+            padding: 40px;
+        }
+        h1 {
+            font-size: 36px;
+            margin-bottom: 60px;
+        }
+        .team-section {
+            display: flex;
+            justify-content: center;
+            gap: 100px;
+        }
+        .team-title {
+            background-color: #5d5fef;
+            color: white;
+            padding: 10px 30px;
+            border-radius: 25px;
+            display: inline-block;
+            margin-bottom: 30px;
+            font-size: 18px;
+        }
+        .team-members {
+            display: flex;
+            gap: 40px;
+        }
+        .member {
+            text-align: center;
+        }
+        .member-img {
+            width: 150px;
+            height: 180px;
+            background-color: #e0e0e0;
+            margin-bottom: 10px;
+            border-radius: 8px;
+        }
+        .member p {
+            margin: 0;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">GrieveX</div>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Our Team</a>
+            <a href="#" class="submit-btn">Submit Grievance</a>
+        </nav>
+    </header>
+    <main>
+        <h1>Meet Our Team Members</h1>
+        <div class="team-section">
+            <div class="team">
+                <div class="team-title">Front End Team</div>
+                <div class="team-members">
+                    <div class="member">
+                        <div class="member-img"></div>
+                        <p>Parsh Jain</p>
+                    </div>
+                    <div class="member">
+                        <div class="member-img"></div>
+                        <p>Priyanshu Pandey</p>
+                    </div>
+                </div>
+            </div>
+            <div class="team">
+                <div class="team-title">Back End Team</div>
+                <div class="team-members">
+                    <div class="member">
+                        <div class="member-img"></div>
+                        <p>Vidush Jindal</p>
+                    </div>
+                    <div class="member">
+                        <div class="member-img"></div>
+                        <p>Rahul Aggarwal</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
